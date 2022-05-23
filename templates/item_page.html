@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Page</title>
+    <style>
+        .menu {
+            border: 1px solid black;
+        }
+        .content {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        footer {
+            border: 1px solid blue;
+        }
+
+
+    </style>
+</head>
+<body>
+<nav class="menu">
+    /<a href="{% url 'home' %}">Домой</a>/<a href="">Об авторе</a>/
+</nav>
+<main class="content">
+    <h1>Страница товара</h1>
+    Название: {{ item.name }} <br>
+    Бренд: {{ item.brand }} <br>
+    Количество: {{ item.count|default:"Товар отсутствует" }}
+
+</main>
+<footer>
+    (с)Митрохина
+</footer>
+</body>
+</html>

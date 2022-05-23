@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .menu {
+            border: 1px solid black;
+        }
+        .content {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        footer {
+            border: 1px solid blue;
+        }
+
+
+    </style>
+</head>
+<body>
+<nav class="menu">
+    /<a href="{% url 'items-list' %}">Список товаров</a>/<a href="">Об авторе</a>/
+</nav>
+<main class="content">
+    <h1>Об авторе</h1>
+    <div>Имя: <b>{{ name }}</b></div>
+    <div>Отчество: <b>{{ surname }}</b></div>
+    <div>Фпмилия: <b>{{ otchstvo }}</b></div>
+    <div>телефон: <b>{{ tel }}</b></div>
+    <div>email: <b>{{ email }}</b></div>
+</main>
+<footer>
+    (с)Митрохина
+</footer>
+</body>
+</html>
